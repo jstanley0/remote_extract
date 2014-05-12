@@ -1,6 +1,7 @@
 #include "mordor/predef.h"
 #include <iostream>
 #include <string>
+#include "mordor/config.h"
 #include "mordor/iomanager.h"
 #include "mordor/streams/http.h"
 #include "mordor/streams/transfer.h"
@@ -12,6 +13,7 @@ using namespace Mordor;
 
 int main(int argc, char **argv)
 {
+    Config::loadFromEnvironment();
     StdoutStream stdoutStream;
     IOManager ioManager;
 
